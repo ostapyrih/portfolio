@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 
 export default function App() {
-  const { pathname } = useLocation();
+  const pathname = useLocation().pathname.replace(/(.)\/$/, "$1");
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title =

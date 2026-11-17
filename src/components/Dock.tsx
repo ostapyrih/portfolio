@@ -6,7 +6,7 @@ import { DATA } from "../data/resume";
 
 export default function Dock() {
   const mouseX = useMotionValue(Infinity);
-  const { pathname } = useLocation();
+  const pathname = useLocation().pathname.replace(/(.)\/$/, "$1");
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex justify-center">
